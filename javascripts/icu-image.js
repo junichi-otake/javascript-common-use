@@ -1,7 +1,7 @@
 if( typeof(icu) === 'undefined' ){ icu = {}; }
 icu.image = {
-  loadImageCheckedSize: function( imgId, imageUrl ){
-    var baseSize = 100;
+  loadImageCheckedSize: function( imgId, imageUrl, baseSize ){
+    if( typeof(baseSize) === 'undefined' ) baseSize=100;
     var dom = $('#'+imgId);
     var img = new Image();
     img.onload = function(){
